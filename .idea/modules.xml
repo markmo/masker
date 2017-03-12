@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/masker.iml" filepath="$PROJECT_DIR$/.idea/modules/masker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/masker-build.iml" filepath="$PROJECT_DIR$/.idea/modules/masker-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalafmt-stub.iml" filepath="$PROJECT_DIR$/.idea/modules/scalafmt-stub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalafmt-stub-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalafmt-stub-build.iml" />
+    </modules>
+  </component>
+</project>
