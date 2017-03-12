@@ -43,3 +43,12 @@ Use Postman to test the API. Alternatively, you can use the Swagger UI at
 
     http://localhost:49165/swagger
 
+Open the `mask` operation. Under Parameters, if you click in the yellow box under Data Type, the example value
+is copied into the body value.
+
+Change the `text` property to "Hello". Click on the small "Try it out!" button under the "Response Messages"
+section. In the "Response Body" further below, a "pass = true" result should be shown. That is, the message
+"Hello" does not contain any personally identifiable information.
+
+Next, set the `text` property to your name. This time, when you click on "Try it out!", a "pass = false" result
+should be shown.
