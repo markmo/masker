@@ -21,6 +21,7 @@ import scala.concurrent.ExecutionContext
 class MaskService(nameDetectorActor: ActorRef,
                   emailDetectorActor: ActorRef,
                   phoneDetectorActor: ActorRef,
+                  dobDetectorActor: ActorRef,
                   log: LoggingAdapter
                  )(implicit executionContext: ExecutionContext)
   extends JsonSupport {
@@ -60,12 +61,14 @@ class MaskService(nameDetectorActor: ActorRef,
             val detectNames = nameDetectorActor ? req
             val detectEmails = emailDetectorActor ? req
             val detectPhoneNumbers = phoneDetectorActor ? req
+            val detectDatesOfBirth = dobDetectorActor ? req
             val f = for {
               nameResult <- detectNames.mapTo[Result]
               emailResult <- detectEmails.mapTo[Result]
               phoneResult <- detectPhoneNumbers.mapTo[Result]
+              dobResult <- detectDatesOfBirth.mapTo[Result]
             } yield {
-              Array(nameResult, emailResult, phoneResult).forall(_.pass)
+              Array(nameResult, emailResult, phoneResult, dobResult).forall(_.pass)
             }
             complete {
               f.map { pass =>

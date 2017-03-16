@@ -17,7 +17,7 @@ This executes
 
     docker run -p 49165:8080 -d masker:1.0
 
-The service will be availble on port 49165
+The service will be available on port 49165
 
 To attach to the shell of the running daemon
 

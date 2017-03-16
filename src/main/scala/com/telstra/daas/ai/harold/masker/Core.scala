@@ -2,7 +2,7 @@ package com.telstra.daas.ai.harold.masker
 
 import akka.actor.{ActorSystem, Props}
 import akka.event.Logging
-import com.telstra.daas.ai.harold.masker.detectors.{EmailDetectorActor, NameDetectorActor, PhoneDetectorActor}
+import com.telstra.daas.ai.harold.masker.detectors.{DobDetectorActor, EmailDetectorActor, NameDetectorActor, PhoneDetectorActor}
 import com.typesafe.config.ConfigFactory
 
 import scala.concurrent.Await
@@ -50,5 +50,6 @@ trait CoreActors {
   val nameDetector = system.actorOf(Props[NameDetectorActor])
   val emailDetector = system.actorOf(Props[EmailDetectorActor])
   val phoneDetector = system.actorOf(Props[PhoneDetectorActor])
+  val dobDetector = system.actorOf(Props[DobDetectorActor])
 
 }

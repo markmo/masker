@@ -46,6 +46,7 @@ lazy val commonSettings = Seq(
     Resolver.sonatypeRepo("snapshots")
   ),
   libraryDependencies ++= Seq(
+    "com.joestelmach" % "natty" % "0.11",
     "com.github.swagger-akka-http" %% "swagger-akka-http" % "0.9.1",
     "org.scalatest" %% "scalatest" % "3.0.1" % "test"
   ),

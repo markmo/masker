@@ -18,7 +18,7 @@ trait Api extends RouteConcatenation {
   private implicit val _ = system.dispatcher
 
   val routes =
-    new MaskService(nameDetector, emailDetector, phoneDetector, log).routes ~
+    new MaskService(nameDetector, emailDetector, phoneDetector, dobDetector, log).routes ~
       new SwaggerDocService(system, config).routes
 
 }
